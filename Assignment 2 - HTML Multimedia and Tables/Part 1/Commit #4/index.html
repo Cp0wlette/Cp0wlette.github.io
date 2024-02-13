@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Mozilla splash page</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Mozilla splash page</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'><!--
+        Name: Christian Powlette
+        File: Original file Assignment #2.html
+        Date: 17 February 2024
+        To use and expand on knowledge around embedding images and videos and HTML responsive image techniques.
+-->
+
+  <style>
       /* header and body setup */
 
       html {
@@ -94,55 +100,27 @@
         display: block;
         max-width: 100%;
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Mozilla</h1>
-      <img src="firefox_logo-only_120.png" alt="a simple 120px fire fox logo"> 
-    </header>
-
-    <main>
-      <article>
-<iframe 
-	src="https://www.youtube.com/embed/ojcNcvb1olg" 
-	height="315" 
-	width="400"
-	title="Firefox Add"
-	frameborder="0
-	allow="autoplay; encrypted-media"
-	allowfullscreen>
-</iframe>
-
-
-        <h2>Rocking the free web</h2>
-
-        <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
-
-        <p>Click on the images below to find more information about the cool stuff Mozilla does. <a href="https://www.flickr.com/photos/mathiasappel/21675551065/">Red panda picture</a> by Mathias Appel.</p>
-      </article>
-
-      <div class="further-info">
-        <!-- insert images with srcsets and sizes -->
-        <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img src="firefox_logo-only_400.png" alt="FireFox Logo"/>
-        </a>
-        <a href="https://www.mozilla.org/">
-          <img src="mozilla-dinosaur-head400.png" alt="Dinosaur"/>
-        </a>
-        <a href="https://addons.mozilla.org/">
-          <img src="firefox-addons400.jpg" alt="FireFox Puzzle">
-        </a>
-        <a href="https://developer.mozilla.org/en-US/">
-          <img src="mdn.svg" alt="Dinosaur Interactive Image">
-        </a>
-        <div class="clearfix"></div>
-      </div>
-
-      <div class="red-panda">
-        <!-- insert picture element -->
-      </div>
-
-    </main>
-  </body>
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mozilla</h1><img src="firefox_logo-only_120.png" alt="a simple 120px fire fox logo">
+  </header>
+  <main>
+    <article>
+      <iframe src="https://www.youtube.com/embed/ojcNcvb1olg" height="315" width="400" title="Firefox Add" frameborder="0 allow=" allowfullscreen></iframe>
+      <h2>Rocking the free web</h2>
+      <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+      <p>Click on the images below to find more information about the cool stuff Mozilla does. <a href="https://www.flickr.com/photos/mathiasappel/21675551065/">Red panda picture</a> by Mathias Appel.</p>
+    </article>
+    <div class="further-info">
+      <!-- insert images with srcsets and sizes -->
+      <a href="https://www.mozilla.org/en-US/firefox/new/"><img src="firefox_logo-only_400.png" alt="FireFox Logo"></a> <a href="https://www.mozilla.org/"><img src="mozilla-dinosaur-head400.png" alt="Dinosaur"></a> <a href="https://addons.mozilla.org/"><img src="firefox-addons400.jpg" alt="FireFox Puzzle"></a> <a href="https://developer.mozilla.org/en-US/"><img src="mdn.svg" alt="Dinosaur Interactive Image"></a>
+      <div class="clearfix"></div>
+    </div>
+    <div class="red-panda">
+      <picture><source media="(max-width: 600px)" srcset="red-panda-portrait-600.jpg"> <img src="red-panda-portrait1600.jpg" alt="red panda"></picture>
+    </div>
+  </main>
+</body>
 </html>
