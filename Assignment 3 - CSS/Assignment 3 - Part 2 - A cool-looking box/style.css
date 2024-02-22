@@ -1,5 +1,15 @@
 html {
   font-family: sans-serif;
 }
-
-/* Your CSS below here */
+	<--
+        Name: Christian Powlette
+        File: style.css
+        Date: 22 February 2024
+        styling a blox post with CSS
+        -->
+div {
+width: 200px;
+height: 200px;
+text-align: center:
+font-size: 1rem;
+     }
