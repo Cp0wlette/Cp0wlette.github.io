@@ -8,8 +8,14 @@ html {
         styling a blox post with CSS
         -->
 div {
-width: 200px;
-height: 200px;
-text-align: center:
-font-size: 1rem;
-     }
+  width: 200px;
+  height: 200px;
+  text-align: center;	
+  margin: auto;
+  line-height: 9;
+  /* Because 1.1 converts to 17.6 px, any larger would not fit the range
+  however, 1.0 converts to 16px, and 1.2 is too large. This was 
+  discouvered when i utilized a rem to px converter. */
+  font-size: 1.1rem;
+  background-color: red;
+  color: white;
