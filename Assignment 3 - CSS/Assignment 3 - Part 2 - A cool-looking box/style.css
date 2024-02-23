@@ -1,12 +1,12 @@
 html {
   font-family: sans-serif;
 }
-	<--
+	/*
         Name: Christian Powlette
         File: style.css
         Date: 22 February 2024
         styling a blox post with CSS
-        -->
+        */
 div {
   width: 200px;
   height: 200px;
@@ -19,3 +19,12 @@ div {
   font-size: 1.1rem;
   background-color: red;
   color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 10px;
+  border: 1px solid rgba(153, 0, 0, 0);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
