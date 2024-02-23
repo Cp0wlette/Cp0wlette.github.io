@@ -123,3 +123,24 @@ a[href*="http"] {
   background: url(eternal-link.jpeg) no-repeat 100% 0;
   background-size: 9px 9px;
 }
+
+a:active {
+  color: transparent:
+  text-shadow: 
+/* PART FOUR LISTS */
+
+ul, ol {
+  line-height: 9px;
+  list-style-type: circle;
+}
+
+/* NAVIGATION MENU */
+
+nav ul {
+  margin-top: 8px;
+}
+
+nav li {
+  margin-bottom: 17px;
+}
+
