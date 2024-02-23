@@ -54,15 +54,22 @@ html {
   font-family: "Times New Roman", Times, seriff;
   font-size: 10px;
 }
+
 /* PART TWO "General text Styling */
 header {
   text-align:center;
 }
 h1, h2 {
-  font-size: 14px;
   letter-spacing: 2px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+h1 {
+  font-size: 16px
 }
 
+h2 {
+  font-size: 15px
+}
 body {
   line-height: 16px;
   letter-spacing: 1px;
@@ -71,4 +78,48 @@ body {
 
 section {
   text-indentation: 20px;
+}
+
+/* PART THREE LINKS */
+
+/* Default link */
+nav a {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: #aa6666;
+  text-decoration: underline;
+  display: block;
+  width: 100%;
+  line-height: 3;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #a66;
+  color: #aa6666;
+}
+
+nav li a:active {
+  color: #aa6666
+}
+
+/* visited link */
+a:visited {
+  color: #f69393;
+  text-decoration: underline;
+}
+
+/* mouse over link */
+a:hover, a:focus {
+  color: #5d3838;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #ffac98;
+}
+
+a[href*="http"] {
+  padding-right: 19px;
+  background: url(eternal-link.jpeg) no-repeat 100% 0;
+  background-size: 9px 9px;
 }
