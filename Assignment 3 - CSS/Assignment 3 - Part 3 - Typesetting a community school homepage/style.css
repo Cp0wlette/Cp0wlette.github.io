@@ -1,5 +1,10 @@
 /* General setup */
-
+	/*
+  Name: Christian Powlette
+  File: style.css
+  Date: 23 February 2024
+  styling a college website with CSS
+   */
 * {
   box-sizing: border-box;
 }
@@ -43,3 +48,8 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+/* PART ONE FONTS */
+html {
+  font-family: "Times New Roman", Times, seriff;
+  font-size: 10px;
+}
