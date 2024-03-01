@@ -1,6 +1,6 @@
 <!--
     Name: Christian Powlette
-     File: styles.css
+     File: index.html
      Date: 23 February 2024
      styling a website about various foods and herbs with images of ballons
  -->
@@ -38,6 +38,8 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
   }
   
   nav a {
