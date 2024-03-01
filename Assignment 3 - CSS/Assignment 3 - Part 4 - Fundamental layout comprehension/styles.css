@@ -1,69 +1,69 @@
-<!--
+/*
     Name: Christian Powlette
      File: index.html
      Date: 23 February 2024
      styling a website about various foods and herbs with images of ballons
- -->
+ */
 body {
-    background-color: #fff;
-    color: #333;
-    margin: 0;
-    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
-  }
-
-  img {
-      max-width: 100%;
-      display: block;
-  }
-  
-  .logo {
-    font-size: 200%;
-    padding: 50px 20px;
-    margin: 0 auto;
-    max-width: 980px;
-  }
-  
-  .grid {
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 980px;
-    display: grid;
-    gap: 1px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  nav {
-    background-color: black;
-    padding: .5em;
-    position: sticky;
-    top: 0;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: .5em 1em;
-  }
-  
-  .photos {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .feature {
-      width: 200px;
-      float: left;
-      padding: 5px;
-  }
+	background-color: #fff;
+	color: #333;
+	margin: 0;
+	font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+.logo {
+	font-size: 200%;
+	padding: 50px 20px;
+	margin: 0 auto;
+	max-width: 980px;
+}
+.grid {
+	margin: 0 auto;
+	padding: 0 20px;
+	max-width: 980px;
+	display: -ms-grid;
+	display: grid;
+	gap: 1px;
+	-ms-grid-columns: 1fr 1px 1fr;
+	grid-template-columns: repeat(2, 1fr);
+}
+nav {
+	background-color: black;
+	padding: .5em;
+	position: sticky;
+	top: 0;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: .5em 1em;
+}
+.photos {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: -ms-grid;
+	display: grid;
+	gap: 1px;
+	-ms-grid-columns: 1fr 1px 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+.feature {
+	width: 200px;
+	float: left;
+	padding: 5px;
+}
