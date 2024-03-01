@@ -30,8 +30,10 @@ body {
   }
   
   nav {
-    background-color: #000;
+    background-color: black;
     padding: .5em;
+    position: sticky;
+    top: 0;
   }
   
   nav ul {
