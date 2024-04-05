@@ -151,6 +151,14 @@ class EvilCircle extends Shape {
       }
     });
   }
+
+  draw(ctx) {
+    ctx.beginPath(); // Begin drawing the shape
+    ctx.strokeStyle = this.color; // Set the stroke color
+    ctx.lineWidth = 3; // Set the stroke width
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI); // Draw a circle
+    ctx.stroke(); // Draw the stroke (outline) of the circle
+  }
 }
 
 loop();
