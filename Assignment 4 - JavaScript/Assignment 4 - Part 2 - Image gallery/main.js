@@ -1,4 +1,3 @@
-
 /*
 Name: Christian Powlette
 File: style.css
@@ -38,12 +37,19 @@ imageFilenames.forEach(filename => {
 });
 
 // Add click event listener to the button to toggle darken effect
-let isDarkened = false;
-darkenBtn.addEventListener('click', () => {
-  if (isDarkened) {
-    displayedImg.classList.remove('darken');
-  } else {
-    displayedImg.classList.add('darken');
+btn.addEventListener('click', () => {
+  
+  const className = btn.getAttribute('class');
+  
+  if (className === 'dark') {
+    btn.setAttribute('class', 'light');
+    btn.textContent = 'Lighten';
+    overlay.style.backgroundColor = "rgb(0 0 0 / 50%)";
+  } 
+  else {
+    btn.setAttribute('class', 'dark');
+    btn.textContent = 'Darken';
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0%)";
   }
-  isDarkened = !isDarkened;
 });
+
