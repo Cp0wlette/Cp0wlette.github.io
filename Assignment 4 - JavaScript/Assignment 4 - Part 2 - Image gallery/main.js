@@ -26,12 +26,12 @@ const altTexts = {
 /* Looping through images */
 imageFilenames.forEach(filename => {
   const img = document.createElement('img');
-  img.src = filename;
+  img.src = `images/${filename}`;
   img.alt = altTexts[filename];
   img.classList.add('thumb-img');
-  img.addEventListener('click', () => {
-    displayedImg.src = filename;
-    displayedImg.alt = altTexts[filename];
+  img.addEventListener('click', (event) => {
+    displayedImage.src = event.target.src;
+    displayedImage.alt = event.target.alt;
   });
   thumbBar.appendChild(img);
 });
