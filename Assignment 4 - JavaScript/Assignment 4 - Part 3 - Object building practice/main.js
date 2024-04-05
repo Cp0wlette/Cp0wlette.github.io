@@ -1,3 +1,9 @@
+/*
+Name: Christian Powlette
+File: main.js
+Date: 5 April 2024
+Scritping Object building practice
+*/
 // setup canvas
 
 const canvas = document.querySelector("canvas");
