@@ -1,7 +1,7 @@
 /*
 Name: Christian Powlette
 File: main.js
-Date: 5 April 2024
+Date: 12 April 2024
 Scripting for a silly story generator
 */
 
@@ -18,7 +18,7 @@ function randomValueFromArray(array){
 
 // 2. RAW TEXT STRINGS
 
-const storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+const storyText = `It was 94 fahrenheit outside, so ${insertX} went for a walk. When they got to ${insertY}, they stared in horror for a few moments, then ${insertZ}. Bob saw the whole thing, but was not surprised — ${insertX} weighs 300 pounds, and it was a hot day.`;
 const insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
 const insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
 const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
