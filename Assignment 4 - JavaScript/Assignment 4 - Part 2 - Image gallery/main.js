@@ -1,7 +1,7 @@
 
 /*
 Name: Christian Powlette
-File: style.css
+File: main.js
 Date: 5 April 2024
 Scritping for a Image gallery
 */
