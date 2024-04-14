@@ -1,9 +1,10 @@
 <!--
   Name: Christian Powlette
   File: index.html
-  Date: 12 April 2024
+  Date: 14 April 2024
 Hyper Text Markup Language for a troubleshooting accesbility assesment
 -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,20 +55,22 @@ Hyper Text Markup Language for a troubleshooting accesbility assesment
         <br><br>
         Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears.
         <br><br>
-        <table>
+
+        <table summary="Types of bear, their coat color, adult size, habitat, lifespan, and diet">
+          <caption>Types of bear and their characteristics</caption>
           <thead>
             <tr>
-              <td>Bear Type</td>
-              <td>Coat</td>
-              <td>Adult size</td>
-              <td>Habitat</td>
-              <td>Lifespan</td>
-              <td>Diet</td>
+              <th scope="col">Bear Type</th>
+              <th scope="col">Coat</th>
+              <th scope="col">Adult size</th>
+              <th scope="col">Habitat</th>
+              <th scope="col">Lifespan</th>
+              <th scope="col">Diet</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Wild</td>
+              <th scope="row">Wild</th>
               <td>Brown or black</td>
               <td>1.4 to 2.8 meters</td>
               <td>Woods and forests</td>
@@ -75,7 +78,7 @@ Hyper Text Markup Language for a troubleshooting accesbility assesment
               <td>Fish, meat, plants</td>
             </tr>
             <tr>
-              <td>Urban</td>
+              <th scope="row">Urban</th>
               <td>North Face</td>
               <td>18 to 22</td>
               <td>Condos and coffee shops</td>
@@ -126,17 +129,26 @@ Hyper Text Markup Language for a troubleshooting accesbility assesment
             <font size="6">Add comment</font>
 
             <form class="comment-form">
-              <div class="flex-pair">
-                Your name:
-                <input type="text" name="name" id="name" placeholder="Enter your name">
-              </div>
-              <div class="flex-pair">
-                Your comment:
-                <input type="text" name="comment" id="comment" placeholder="Enter your comment">
-              </div>
-              <div>
-                <input type="submit" value="Submit comment">
-              </div>
+              <form class="search-form">
+                <label for="search" class="search input label">Search</label>
+                <input type="text" id="search" name="search" placeholder="Search">
+                <button type="submit">Submit</button>
+                <form class="comment-form">
+                  <div class="flex-pair">
+                    <label for="name">Your name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                  </div>
+                  <div class="flex-pair">
+                    <label for="comment">Your comment:</label>
+                    <input type="text" name="comment" id="comment" placeholder="Enter your comment">
+                  </div>
+                  <div>
+                    <input type="submit" value="Submit comment">
+                  </div>
+                </form>
+                
+              </form>
+              
             </form>
 
             <font size="6">Comments</font>
