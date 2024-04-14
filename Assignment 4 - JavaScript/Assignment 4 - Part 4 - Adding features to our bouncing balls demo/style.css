@@ -2,9 +2,11 @@
 /*
   Name: Christian Powlette
   File: style.css
-  Date: 5 April 2024
+  Date: 14 April 2024
   cascading style sheet for for an object-building practice
 */
+
+/* style.css */
 
 html, body {
   margin: 0;
@@ -25,17 +27,35 @@ h1 {
   letter-spacing: -1px;
   position: absolute;
   margin: 0;
-  top: -4px;
-  right: 5px;
-
+  top: 10px; 
+  left: 10px; 
   color: transparent;
   text-shadow: 0 0 4px white;
 }
 
 p {
+  font-size: 1rem; 
   position: absolute;
   margin: 0;
-  top: 35px;
-  right: 5px;
+  top: 10px; 
+  right: 150px; 
   color: #aaa;
 }
+
+#score {
+  font-size: 1rem; 
+  position: absolute;
+  margin: 0;
+  top: 30px; 
+  right: 150px; 
+  color: #aaa;
+}
+
+#ball-count-display {
+  font-size: 1rem; 
+  position: absolute;
+  margin: 0;
+  top: 50px; 
+  right: 150px; 
+  color: #aaa;
+} 
