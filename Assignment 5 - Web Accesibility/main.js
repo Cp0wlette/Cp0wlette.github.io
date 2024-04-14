@@ -1,18 +1,21 @@
 /*
   Name: Christian Powlette
   File: main.js
-  Date: 12 April 2024
+  Date: 14 April 2024
 JavaScript Scripting for a troubleshooting accesbility assesment
 */
-
-// functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
 const commentWrapper = document.querySelector('.comment-wrapper');
 
+// Hide comments section
 commentWrapper.style.display = 'none';
 
-showHideBtn.onclick = function() {
+// Add tabindex attribute to make the button focusable
+showHideBtn.setAttribute('tabindex', '0');
+
+// Function to change visibility of comments section
+function toggleComments() {
   let showHideText = showHideBtn.textContent;
   if(showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
@@ -21,9 +24,18 @@ showHideBtn.onclick = function() {
     showHideBtn.textContent = 'Show comments';
     commentWrapper.style.display = 'none';
   }
-};
+}
 
-// functionality for adding a new comment via the comments form
+// Comments visibility 
+showHideBtn.addEventListener('click', toggleComments);
+showHideBtn.addEventListener('keydown', function(event) {
+  // Check if Enter key is pressed
+  if (event.key === 'Enter') {
+    toggleComments();
+  }
+});
+
+// Adding new comments with the comments form
 
 const form = document.querySelector('.comment-form');
 const nameField = document.querySelector('#name');
@@ -52,3 +64,4 @@ function submitComment() {
   nameField.value = '';
   commentField.value = '';
 }
+
