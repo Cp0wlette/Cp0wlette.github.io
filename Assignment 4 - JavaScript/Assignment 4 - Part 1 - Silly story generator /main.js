@@ -1,7 +1,7 @@
 /*
 Name: Christian Powlette
 File: main.js
-Date: 12 April 2024
+Date: 15 April 2024
 Scripting for a silly story generator
 */
 
@@ -18,40 +18,43 @@ function randomValueFromArray(array){
 
 // 2. RAW TEXT STRINGS
 
-const storyText = `It was 94 fahrenheit outside, so ${insertX} went for a walk. When they got to ${insertY}, they stared in horror for a few moments, then ${insertZ}. Bob saw the whole thing, but was not surprised — ${insertX} weighs 300 pounds, and it was a hot day.`;
-const insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
-const insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
-const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
+const username = ['Bob']
+const nickname = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
+const establishment = ['the soup kitchen', 'Disneyland', 'the White House'];
+const conclusion = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
 
+const storyText = `It was 94 fahrenheit outside, so ${randomValueFromArray(nickname)} went for a walk. When they got to ${randomValueFromArray(establishment)}, they stared in horror for a few moments, then ${randomValueFromArray(conclusion)}. ${username} saw the whole thing, but was not surprised — ${randomValueFromArray(nickname)} weighs 300 pounds, and it was a hot day.`;
 
 // 3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
 
 randomize.addEventListener('click', result);
 
-
 function result() {
-    let newStory = storyText;
+  let newStory = storyText;
 
-    const xItem = randomValueFromArray(insertX);
-    const yItem = randomValueFromArray(insertY);
-    const zItem = randomValueFromArray(insertZ);
-  
-    newStory = newStory.replaceAll(':insertx:',xItem);
-    newStory = newStory.replaceAll(':inserty:',yItem);
-    newStory = newStory.replaceAll(':insertz:',zItem);
+  const xItem = randomValueFromArray(nickname);
+  const yItem = randomValueFromArray(establishment);
+  const zItem = randomValueFromArray(conclusion);
 
-  if (customName.value !== '') {
-    const name = customName.value;
-    newStory = newStory.replaceAll('Bob', name);
+  newStory = newStory.replaceAll(':insertX:', xItem);
+  newStory = newStory.replaceAll(':insertY:', yItem);
+  newStory = newStory.replaceAll(':insertZ:', zItem);
+
+  const username = customName.value.trim(); // Get the username and trim any extra spaces
+
+  if (username !== '') {
+      newStory = newStory.replaceAll('Bob', username);
   }
 
   if (document.getElementById("uk").checked) {
-    const weight = `${Math.round(300*0.0714286)} stone`;
-    const temperature =  `${Math.round((94-32) * 5 / 9)} centigrade`;
-    newStory = newStory.replace('94 fahrenheit', temperature);
-    newStory = newStory.replace('300 pounds', weight);
+      const weight = `${Math.round(300 * 0.0714286)} stone`;
+      const temperature = `${Math.round((94 - 32) * 5 / 9)} centigrade`;
+      newStory = newStory.replace('94 fahrenheit', temperature);
+      newStory = newStory.replace('300 pounds', weight);
   }
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }
+
+
