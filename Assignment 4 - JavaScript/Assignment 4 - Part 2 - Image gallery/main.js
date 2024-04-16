@@ -2,7 +2,7 @@
 /*
 Name: Christian Powlette
 File: main.js
-Date: 5 April 2024
+Date: 15 April 2024
 Scritping for a Image gallery
 */
 
