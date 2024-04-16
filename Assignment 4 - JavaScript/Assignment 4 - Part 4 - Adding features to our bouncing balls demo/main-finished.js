@@ -186,7 +186,7 @@ function updateScore() {
 // Create evil circle instance
 const evilCircle = new EvilCircle(width / 2, height / 2);
 
-// Event listener for evil circle movement
+// Event listener for keyboard movement
 window.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "a":
@@ -202,6 +202,13 @@ window.addEventListener("keydown", (e) => {
       evilCircle.y += evilCircle.velY;
       break;
   }
+});
+
+// Event listener for mouse movement
+window.addEventListener("mousemove", (e) => {
+  // Update evil circle position to match mouse coordinates
+  evilCircle.x = e.clientX;
+  evilCircle.y = e.clientY;
 });
 
 // Update loop to incorporate evil circle
@@ -226,4 +233,5 @@ function loop() {
 }
 
 loop();
+
 
