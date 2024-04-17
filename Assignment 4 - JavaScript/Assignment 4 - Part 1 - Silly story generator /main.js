@@ -1,7 +1,7 @@
 /*
 Name: Christian Powlette
 File: main.js
-Date: 15 April 2024
+Date: 17 April 2024
 Scripting for a silly story generator
 */
 
@@ -36,9 +36,9 @@ function result() {
   const yItem = randomValueFromArray(establishment);
   const zItem = randomValueFromArray(conclusion);
 
-  newStory = newStory.replaceAll(':insertX:', xItem);
-  newStory = newStory.replaceAll(':insertY:', yItem);
-  newStory = newStory.replaceAll(':insertZ:', zItem);
+  newStory = `${newStory.replace(':insertX:', xItem)
+                       .replace(':insertY:', yItem)
+                       .replace(':insertZ:', zItem)}`;
 
   const username = customName.value.trim(); // Get the username and trim any extra spaces
 
@@ -56,5 +56,4 @@ function result() {
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }
-
 
